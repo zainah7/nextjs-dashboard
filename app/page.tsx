@@ -2,12 +2,8 @@ import AcmeLogo from "@/app/ui/acme-logo";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import styles from "@/app/ui/home.module.css";
 import Link from "next/link";
+import { lusitana } from "@/app/ui/fonts";
 import Image from "next/image";
-import { Lusitana } from "next/font/google";
-export const lusitana = Lusitana({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 export default function Page() {
   return (
@@ -42,6 +38,13 @@ export default function Page() {
             height={760}
             className="hidden md:block"
             alt="Screenshots of the dashboard project showing desktop version"
+          />
+          <Image
+            src="/hero-mobile.png"
+            width={560}
+            height={620}
+            className="block md:hidden"
+            alt="Screenshot of the dashboard project showing mobile version"
           />
         </div>
       </div>
